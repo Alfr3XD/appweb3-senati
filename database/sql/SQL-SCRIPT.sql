@@ -62,5 +62,4 @@ CREATE TABLE IMAGES
 )ENGINE=INNODB;cdk
 
 -- inserts
- 
 
