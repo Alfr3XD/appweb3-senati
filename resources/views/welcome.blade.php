@@ -49,14 +49,6 @@
                     VEN Y EXPLORA CON NOSOTROS
                 </h1>
             </div>
-            <!---
-            <div class="relative">
-                <img class="absolute w-full h-[550px] rounded-[8px] object-cover" src="https://2.blogs.elcomercio.pe/checklistviajero/wp-content/uploads/sites/292/2018/12/CATARATAS-HORNILLOS-ABRE.jpg" alt="" draggable="false"/>
-                <h1 class="absolute left-5 max-w-[500px] pt-20 text-white font-bold text-center text-[50px]">
-                    VEN Y EXPLORA CON NOSOTROS
-                </h1>
-            </div>
-            --> 
         </div>
     </body>
 </html>
