@@ -6,50 +6,62 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
         @vite('resources/css/app.css')
         <title>Laravel</title>
     </head>
-    <body class="top-0 min-h-screen bg-[#f5f5f5]">
-         <!-- NAV BAR -->
-        <div class="fixed w-full z-40 bg-white h-[50px]">
-            <div class="container mx-auto max-w-[1020px] h-[50px]">
-                <div class="flex space-x-[100px] justify-center">
-                    <h1 class="pt-2 font-bold text-[#0057FF] text-[25px]">
-                        <a href="/">SENATI VIAJES</a>
-                    </h1>
+    <body class="top-0 min-h-screen bg-white">
 
-                    <div class="relative mt-3">
+        <!-- NAV BAR -->
+        <div class = "fixed w-full z-40 bg-white h-[80px] shadow-xl">  
+            <div class="container mx-auto max-w-[1150px]">
+                <div class="flex items-center justify-center space-x-[100px]">
+                    <div class="py-[20px] font-semibold text-[#0057FF] text-[25px]">
+                        <a href="/">
+                            SENATI VIAJES
+                        </a>
+                    </div>
+                    <div class="relative my-1 justify-self-center">
                         <svg class="absolute h-6 w-6 right-0" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
                         </svg>
 
-                        <input type="text" placeholder="Buscar..." maxlength="32" class="border-b-2 border-[#ffffff] h-[24px] w-[355px] focus:outline-none focus:border-[#000000]">
+                        <input type="text" placeholder="Buscar..." maxlength="35" class="border-b-2 border-[#ffffff] h-[30px] w-[450px] focus:outline-none">
                     </div>
-
-                    <ul class='flex space-x-[40px] mt-4 text-[15px] font-black'>
+                    <ul class="flex space-x-6">
                         <li>
-                            <a href='#aea' class="duration-500 NAV-principal-txt hover:text-blue-600">
-                                REGIONES
+                            <a href="#" class="duration-500 hover:text-blue-600">
+                                LUGARES
                             </a>
                         </li>
                         <li>
-                            <a href='#contacyo' class="duration-500 Nav-link hover:text-blue-600">
-                                CONTÁCTOS
+                            <a href="#" class="duration-500 hover:text-blue-600">
+                                CONTACTO
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
+        <!-- Nav bar -->
 
-        <div class="container mx-auto max-w-[1400px]">
-            <div class="rounded-[15px] w-full h-[550px]" style="background-image: url('https://2.blogs.elcomercio.pe/checklistviajero/wp-content/uploads/sites/292/2018/12/CATARATAS-HORNILLOS-ABRE.jpg')">
-                <h1 class="container mx-auto max-w-[500px] pt-[150px] text-white font-bold text-center text-[50px] drop-shadow-lg shadow-red-500">
-                    VEN Y EXPLORA CON NOSOTROS
-                </h1>
+        <div class="translate-y-[100px] ">
+            <div class= "container mx-auto max-w-[1200px] h-[400px]" >
+                <img class="object-cover w-full h-full rounded-[15px]" src="https://www.confiep.org.pe/wp-content/uploads/2020/09/11-Turismo.png" alt="">
+            </div>
+
+            <div class="container mx-auto max-w-[600px] py-8">
+                <h1 class="font-semibold text-[#0057FF] text-[35px] text-center">EXPLORE LUGARES MARAVILLOSOS EN EL PERÚ<h2>
+            </div>
+            <div class="w-full bg-[#0057FF] py-9">
+                <div class="duration-700 container mx-auto max-w-[220px] h-[50px] bg-white rounded-[10px] hover:brightness-[0.8] hover:scale-[1.1]">
+                    <button class=" w-[220px] h-[50px] text-[20px]">
+                        <a href="#"> Explora lugares </a>
+                    </button>
+                </div>
             </div>
         </div>
+
     </body>
 </html>
