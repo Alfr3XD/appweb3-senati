@@ -62,4 +62,35 @@ CREATE TABLE IMAGES
 )ENGINE=INNODB;
 
 -- inserts
+--- regiones
+INSERT INTO region (r_id, r_description) VALUES (1, "ÁNCASH");
+INSERT INTO region (r_id, r_description) VALUES (2, "LIMA");
+INSERT INTO region (r_id, r_description) VALUES (3, "TRUJILLO");
+INSERT INTO region (r_id, r_description) VALUES (4, "TUMBES");
+INSERT INTO region (r_id, r_description) VALUES (5, "LAMBAYEQUE");
+INSERT INTO region (r_id, r_description) VALUES (6, "CAJAMARCA");
+INSERT INTO region (r_id, r_description) VALUES (7, "CUSCO");
+INSERT INTO region (r_id, r_description) VALUES (8, "ICA");
 
+-- provincias
+-- ANCASH
+INSERT INTO provincia (pr_id, pr_description, r_id) VALUES (1, "SANTA", 1);
+INSERT INTO provincia (pr_id, pr_description, r_id) VALUES (2, "HUARAZ", 1);
+INSERT INTO provincia (pr_id, pr_description, r_id) VALUES (3, "CASMA", 1);
+
+-- distritos
+-- SANTA
+INSERT INTO DISTRITO (ds_id, ds_description, pr_id) VALUES (1, "CHIMBOTE", 1);
+INSERT INTO DISTRITO (ds_id, ds_description, pr_id) VALUES (2, "COISHCO", 1);
+INSERT INTO DISTRITO (ds_id, ds_description, pr_id) VALUES (3, "MORO", 1);
+INSERT INTO DISTRITO (ds_id, ds_description, pr_id) VALUES (4, "NUEVO CHIMBOTE", 1);
+
+-- lugares
+-- CHIMBOTE
+INSERT INTO LUGAR (lg_id, lg_nombre, lg_description, ds_id) VALUES (1, "VIVERO FORESTAL", "Parque grande con un lago de recreación, piscina, atracciones para los niños y un zoológico pequeño.", 1);
+INSERT INTO LUGAR (lg_id, lg_nombre, lg_description, ds_id) VALUES (2, "CERRO DE LA PAZ", "Un mirador turístico", 1);
+
+-- IMAGES
+-- VIVERO
+INSERT INTO images (img_id, img_description, img_uri, lg_id) VALUES (1, "VIVERO 1", "https://www.lugaresturisticosperu.com/wp-content/uploads/vivero-forestal-de-chimbote.jpg", 1);
+INSERT INTO images (img_id, img_description, img_uri, lg_id) VALUES (2, "VIVERO 2", "https://radiorsd.pe/sites/default/files/field/image/vivero_forestal_rsd.jpg", 1);
