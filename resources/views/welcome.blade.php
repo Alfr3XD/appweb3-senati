@@ -8,12 +8,14 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+        <link href="{{ URL::asset('resources/css/carousel.css') }}" rel="stylesheet">
         @vite('resources/css/app.css')
         <title>Laravel</title>
     </head>
     <body class="top-0 min-h-screen bg-white">
 
-        <!-- NAV BAR -->
+    <!-- NAV BAR -->
+    <header>
         <div class = "fixed w-full z-40 bg-white h-[80px] shadow-xl">  
             <div class="container mx-auto max-w-[1150px]">
                 <div class="flex items-center justify-center space-x-[100px]">
@@ -31,9 +33,12 @@
                     </div>
                     <ul class="flex space-x-6">
                         <li>
-                            <a href="#" class="duration-500 hover:text-blue-600">
-                                LUGARES
-                            </a>
+                            <a href="#" class="duration-500 hover:text-blue-600"> LUGARES </a>
+                            <ul>
+                                @foreach($region as $fila_reg)
+                                    <li><a class="dropdown-item" href="#">{{$fila_reg->r_description}}</a></li>
+                                @endforeach
+                            </ul>
                         </li>
                         <li>
                             <a href="#" class="duration-500 hover:text-blue-600">
@@ -44,10 +49,12 @@
                 </div>
             </div>
         </div>
-        <!-- Nav bar -->
-
+    </header>
+    <!-- Nav bar -->
+        
+    <main>
         <div class="translate-y-[100px] ">
-            <div class= "container mx-auto max-w-[1200px] h-[400px]" >
+            <div class= "container mx-auto max-w-[1200px] h-[400px]">
                 <img class="object-cover w-full h-full rounded-[15px]" src="https://www.confiep.org.pe/wp-content/uploads/2020/09/11-Turismo.png" alt="">
             </div>
 
@@ -62,6 +69,6 @@
                 </div>
             </div>
         </div>
-
+    </main>
     </body>
 </html>
