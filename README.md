@@ -24,13 +24,10 @@ composer global require laravel/installer
 cd appweb3-senati
 composer install
 ```
+
 **PREPARA LA BASE DE DATOS**
 En la ruta del repositorio `ruta:../appweb3-senati/database/sql/SQL-SCRIPT.sql`
 Ahí se tiene el archivo SQL que se ejecutará en la base de datos **MYSQL** de **LARAGON** en **HEIDISQL PORTABLE**
-
-![REFERENCE](https://i.ibb.co/JvsKJrm/Captura-de-pantalla-2022-10-24-110534.png)
-
-
 
 **ENCIENDE EL SERVIDOR**
 - En la consola de Powershell ejecutaremos el comando 
@@ -43,5 +40,4 @@ Se encenderá los servicios de **VITE**
 ```
 php artisan serve
 ```
-
 La consola arrojará el enlace de la página web que se realizó.
