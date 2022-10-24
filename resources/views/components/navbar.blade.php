@@ -1,6 +1,7 @@
-<!-- NAV BAR -->
+@section('navbar')
 <header>
-    <div class = "fixed w-full z-40 bg-white h-[80px] shadow-xl">  
+    
+    <div class = "top-0 fixed w-full z-40 bg-white h-[80px] shadow-xl">  
         <div class="container mx-auto max-w-[1150px]">
             <div class="flex items-center justify-center space-x-[100px]">
                 <div class="py-[20px] font-semibold text-[#0057FF] text-[25px]">
@@ -15,14 +16,26 @@
                 </div>
                 <ul class="flex space-x-6">
                     <li>
-                        <a href="#" class="duration-500 hover:text-blue-600"> LUGARES </a>
+                        <button id="lugares_id" data-dropdown-toggle="drop_lugares" data-dropdown-placement="bottom" class="duration-500 hover:text-blue-600"> LUGARES </button>
+
+                        <div id="drop_lugares" class="hidden z-10 w-60 bg-white rounded-[10px] drop-shadow-xl border-2">
+                            <ul>
+                                @foreach($region as $fila_reg)
+                                    <li><a class="duration-500 flex p-2 text-center hover:text-blue-600 hover:bg-neutral-300 rounded-[10px]" href="#">{{$fila_reg->r_description}}</a></li>
+                                @endforeach
+                            </ul>
+                        </div>
+                            
                     </li>
                     <li>
-                        <a href="#" class="duration-500 hover:text-blue-600"> CONTACTO </a>
+                        <a href="#" class="duration-500 hover:text-blue-600">
+                            CONTACTO
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
+    
 </header>
-<!-- Nav bar -->
+@show

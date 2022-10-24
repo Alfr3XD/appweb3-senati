@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\ems\RegionController;
+use App\Http\Controllers\ems\RegionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +15,4 @@ use app\Http\Controllers\ems\RegionController;
 */
 
 
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::post("welcome", [RegionController::class, 'index']);
+Route::get("/", [RegionController::class, 'index']);
