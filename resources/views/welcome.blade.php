@@ -14,10 +14,25 @@
     </head>
     <body class="top-0 min-h-screen bg-white">
     <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            setTimeout(function(){
+                var replacers = document.querySelectorAll('[data-replace]');
+                for(var i=0; i<replacers.length; i++){
+                    let replaceClasses = JSON.parse(replacers[i].dataset.replace.replace(/'/g, '"'));
+                    Object.keys(replaceClasses).forEach(function(key) {
+                        replacers[i].classList.remove(key);
+                        replacers[i].classList.add(replaceClasses[key]);
+                    });
+                }
+            }, 1);
+        });
+    </script>
     <main>
         <div class="translate-y-[100px]">
             <div data-carousel="slide" class="relative" id="default-carousel" data-bs-interval="true">
-                <div class= "relative container mx-auto max-w-[1200px] h-[400px] overflow-hidden rounded-[15px]">
+                <div class= "duration-1000 opacity-0 relative container mx-auto max-w-[1200px] h-[400px] overflow-hidden rounded-[15px]"
+                data-replace='{"opacity-0": "opacity-100"}'>
 
                     @foreach($images as $image_lst)
                         <div class="hidden duration-700 ease-in-out" data-carousel-item>
@@ -42,7 +57,9 @@
             </div>
 
             <div class="container mx-auto max-w-[600px] py-8">
-                <h1 class="font-semibold text-[#0057FF] text-[35px] text-center">EXPLORE LUGARES MARAVILLOSOS EN EL PERÚ<h2>
+                <h1 class="duration-1000 font-semibold text-[#0057FF] text-[35px] text-center transform transition-all translate-y-12 ease-out opacity-0" data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"}'>
+                    EXPLORE LUGARES MARAVILLOSOS EN EL PERÚ
+                </h1>
             </div>
             <div class="w-full bg-[#0057FF] py-9">
             </div>
