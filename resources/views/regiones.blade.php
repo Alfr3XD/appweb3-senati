@@ -18,7 +18,7 @@
         </script>
 
         @vite('resources/css/app.css')
-        <title>SENATI VIAJES</title>
+        <title>REGIONES</title>
     </head>
     <body class="duration-700 top-0 min-h-screen bg-white dark:bg-slate-800">
     <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
