@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ems\LugaresController;
 use App\Http\Controllers\ems\RegionController;
 
 /*
@@ -16,3 +17,4 @@ use App\Http\Controllers\ems\RegionController;
 
 
 Route::get("/", [RegionController::class, 'index']);
+Route::get("/lugares", [LugaresController::class, 'index']);

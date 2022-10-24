@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class RegionController extends Controller
+class LugaresController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +17,8 @@ class RegionController extends Controller
     {
         $regiones = DB::Select("SELECT * FROM region");
         $lugares = DB::Select("SELECT * FROM lugar");
-        $images = DB::Select("SELECT * FROM images_i");
 
-        return view('welcome', ["region" => $regiones, "lugares" => $lugares, "images" => $images]);
+        return view('lugares', ["region" => $regiones, "lugares" => $lugares]);
     }
 
     /**
