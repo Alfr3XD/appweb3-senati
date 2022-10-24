@@ -6,21 +6,22 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class LugaresController extends Controller
+class LugarInfoController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($slug)
+    public function index($slug, $slug1)
     {
         $regiones = DB::Select("SELECT * FROM region");
         $lugares = DB::Select("SELECT * FROM lugar");
         $region = DB::Select('SELECT * FROM region WHERE r_description LIKE "'.$slug.'"');
-        $lugares_rg = DB::Select('SELECT lg.lg_id, rg.r_description, lg.lg_nombre, lg.lg_description, lg.lg_image FROM region rg INNER JOIN LUGAR lg ON rg.r_id = lg.r_id WHERE rg.r_description LIKE "'.$slug.'"');
-
-        return view('regiones', ["regiones" => $regiones, "lugares" => $lugares, "region" => $region, "lugares_rg" => $lugares_rg]);
+        $lugares_rg = DB::Select('SELECT lg.lg_id, lg.lg_nombre, lg.lg_description, lg.lg_image FROM region rg INNER JOIN LUGAR lg ON rg.r_id = lg.r_id WHERE rg.r_description LIKE "'.$slug.'"');
+        $images = DB::Select('SELECT lg.lg_id, lg.lg_nombre, lg.lg_description, img.img_uri FROM lugar lg INNER JOIN images img ON lg.lg_id = img.lg_id WHERE lg.lg_nombre LIKE "'.$slug1.'"');
+        $lugarinfo = DB::Select('SELECT * FROM lugar WHERE lg_nombre LIKE "'.$slug1.'"');
+        return view('lugarinfo', ["regiones" => $regiones, "lugares" => $lugares, "region" => $region, "lugares_rg" => $lugares_rg, "images" => $images, "lugarinfo" => $lugarinfo]);
     }
 
     /**

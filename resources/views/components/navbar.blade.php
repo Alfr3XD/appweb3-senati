@@ -24,8 +24,8 @@
 
                         <div id="drop_lugares" class="hidden z-10 w-60 py-2 bg-white rounded-[5px] drop-shadow-xl border-2 dark:bg-slate-900">
                             <ul>
-                                @foreach($region as $fila_reg)
-                                    <li><a class="duration-500 flex py-2 px-4 hover:text-white hover:bg-blue-600 dark:text-white" href="lugares/{{$fila_reg->r_description}}">{{$fila_reg->r_description}}</a></li>
+                                @foreach($regiones as $fila_reg)
+                                    <li><a class="duration-500 flex py-2 px-4 hover:text-white hover:bg-blue-600 dark:text-white" href="/regiones/{{$fila_reg->r_description}}">{{$fila_reg->r_description}}</a></li>
                                 @endforeach
                             </ul>
                         </div>

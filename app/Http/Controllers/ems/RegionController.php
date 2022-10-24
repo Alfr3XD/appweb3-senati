@@ -19,7 +19,7 @@ class RegionController extends Controller
         $lugares = DB::Select("SELECT * FROM lugar");
         $images = DB::Select("SELECT * FROM images_i");
 
-        return view('welcome', ["region" => $regiones, "lugares" => $lugares, "images" => $images]);
+        return view('welcome', ["regiones" => $regiones, "lugares" => $lugares, "images" => $images]);
     }
 
     /**

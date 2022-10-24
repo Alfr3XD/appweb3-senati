@@ -12,6 +12,7 @@ CREATE TABLE LUGAR
 	lg_id INT NOT NULL PRIMARY KEY,
 	lg_nombre VARCHAR(100) NOT NULL,
 	lg_description VARCHAR(100) NOT NULL,
+	lg_image VARCHAR(999) NOT NULL,
 	r_id INT NOT NULL,
 	
 	CONSTRAINT `FK_distrito_lugar` FOREIGN KEY (`r_id`)
@@ -53,12 +54,12 @@ INSERT INTO region (r_id, r_description) VALUES (7, "CUSCO");
 INSERT INTO region (r_id, r_description) VALUES (8, "ICA");
 
 -- lugares
-INSERT INTO LUGAR (lg_id, lg_nombre, lg_description, ds_id) VALUES (1, "VIVERO FORESTAL", "Parque grande con un lago de recreación, piscina, atracciones para los niños y un zoológico pequeño.", 1);
-INSERT INTO LUGAR (lg_id, lg_nombre, lg_description, ds_id) VALUES (1, "CERRO DE LA PAZ", "Un mirador turístico", 1);
+INSERT INTO LUGAR (lg_id, lg_nombre, lg_description, lg_image, r_id) VALUES (1, "VIVERO FORESTAL", "Parque grande con un lago de recreación, piscina, atracciones para los niños y un zoológico pequeño.", "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Cultivos_de_pino_casuarina_%28Casuarina_equisetifolia%29_en_el_Vivero_Forestal_de_Chimbote_06.jpg/640px-Cultivos_de_pino_casuarina_%28Casuarina_equisetifolia%29_en_el_Vivero_Forestal_de_Chimbote_06.jpg", 1);
+INSERT INTO LUGAR (lg_id, lg_nombre, lg_description, lg_image, r_id) VALUES (2, "CERRO DE LA PAZ", "Un mirador turístico", "https://sobre-peru.com/wp-content/uploads/Cerro-de-la-Juventud-en-Chimbote.jpg", 1);
 
 -- IMAGES
-INSERT INTO images (img_id, img_description, img_uri, lg_id) VALUES (1, "https://www.lugaresturisticosperu.com/wp-content/uploads/vivero-forestal-de-chimbote.jpg", 1);
-INSERT INTO images (img_id, img_description, img_uri, lg_id) VALUES (2, "https://radiorsd.pe/sites/default/files/field/image/vivero_forestal_rsd.jpg", 1);
+INSERT INTO images (img_id, img_uri, lg_id) VALUES (1, "https://www.lugaresturisticosperu.com/wp-content/uploads/vivero-forestal-de-chimbote.jpg", 1);
+INSERT INTO images (img_id, img_uri, lg_id) VALUES (2, "https://radiorsd.pe/sites/default/files/field/image/vivero_forestal_rsd.jpg", 1);
 
 -- IMAGES DE INICIO
 
