@@ -12,16 +12,22 @@
                         <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
                     </svg>
 
-                    <input type="text" placeholder="Buscar..." maxlength="35" class="border-b-2 border-[#ffffff] h-[30px] w-[450px] focus:outline-none">
+                    <input type="text" list="lugares_lst" placeholder="Buscar..." maxlength="35" class="appearance-none border-b-2 border-[#ffffff] h-[30px] w-[450px] focus:outline-none">
+                        
+                    <datalist id="lugares_lst" class="appearance-none z-10 w-60 bg-white rounded-[10px] drop-shadow-xl border-2">
+                        @foreach($lugares as $fila_lg)
+                            <option class="duration-500 flex p-2 text-center hover:text-blue-600 hover:bg-neutral-300 rounded-[10px]"> {{$fila_lg->lg_nombre}} </option>
+                        @endforeach                  
+                    </datalist>
                 </div>
                 <ul class="flex space-x-6">
                     <li>
-                        <button id="lugares_id" data-dropdown-toggle="drop_lugares" data-dropdown-placement="bottom" class="duration-500 hover:text-blue-600"> LUGARES </button>
+                        <button id="lugares_id" data-dropdown-toggle="drop_lugares" data-dropdown-placement="bottom" class="duration-500 hover:text-blue-600"> REGIONES </button>
 
-                        <div id="drop_lugares" class="hidden z-10 w-60 bg-white rounded-[10px] drop-shadow-xl border-2">
+                        <div id="drop_lugares" class="hidden z-10 w-60 py-2 bg-white rounded-[10px] drop-shadow-xl border-2">
                             <ul>
                                 @foreach($region as $fila_reg)
-                                    <li><a class="duration-500 flex p-2 text-center hover:text-blue-600 hover:bg-neutral-300 rounded-[10px]" href="#">{{$fila_reg->r_description}}</a></li>
+                                    <li><a class="duration-500 flex py-2 px-4 hover:text-white hover:bg-blue-600" href="#">{{$fila_reg->r_description}}</a></li>
                                 @endforeach
                             </ul>
                         </div>

@@ -16,8 +16,10 @@ class RegionController extends Controller
     public function index()
     {
         $regiones = DB::Select("SELECT * FROM region");
+        $lugares = DB::Select("SELECT * FROM lugar");
+        $images = DB::Select("SELECT * FROM images");
 
-        return view('welcome', ["region" => $regiones]);
+        return view('welcome', ["region" => $regiones, "lugares" => $lugares, "images" => $images]);
     }
 
     /**
